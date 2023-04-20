@@ -15,4 +15,4 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build /src --file Dockerfile --tag IoT_SIM:$(date +%s)
+      run: docker build /src --file Dockerfile --tag iot_sim:$(date +%s)
