@@ -22,10 +22,11 @@ def handler():
         })
     }
 
-@app.route('/run_simulation', methods=['POST'])
+@app.route('/run_simulation', methods=['get'])
 def run_simulation():
     response = handler()
     return jsonify(response["body"]), response["statusCode"], response["headers"]
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=8080)
+
